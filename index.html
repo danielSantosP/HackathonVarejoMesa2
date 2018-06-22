@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/myStyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <script type:"text/javascript" src="js/myJS.js""></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
@@ -24,12 +25,31 @@
                     </div>
                 </div>
                 <div class="col-10 section-body p0">
-                    <section class="formulário">
-                        <h1 id="titulo">Formulário</h1><br><br>
-                        <div class="itens_form">
-                            <p>Nome: </p>
-                            <input type="text" value="Nome completo">
-                        </div>
+                    <section class="formulario">
+                        <form name="new-form" method="POST">
+                            <h1 id="titulo">Formulário</h1><br><br>
+                            <div class="col-6 itens_form">
+                                <p id="name">
+                                    <label>Nome: </label> 
+                                    <input id="nomeInput" type="text" placeholder="Nome completo" name="nome" required>
+                                </p>
+                                <p id="tel">
+                                    <label>Telefone: </label>
+                                    <input id="telInput" type="text" placeholder="telefone" pattern="[0-9]{2}[0-9]{9} ">
+                                </p>
+                                <p id="mail">
+                                    <label>E-mail:</label> 
+                                    <input id="mailInput" type="email" placeholder="e-mail">
+                                </p>
+                                <p id="obs">
+                                    <label>Observação: </label>
+                                    <textarea placeholder="Escreva sua opinião"></textarea> 
+                                </p id="botao">
+                                <p id="submit" class="submit">
+                                    <input type="submit" onclick="enviarDados();" value="Enviar">
+                                </p>
+                            </div>
+                        </form>
                     </section>
                 </div>
             </div>
